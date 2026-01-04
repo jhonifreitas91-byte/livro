@@ -230,57 +230,32 @@ src="https://www.facebook.com/tr?id=1135594271979654&ev=PageView&noscript=1"
   </div>
   <button class="arrow right" onclick="move(1)">›</button>
 </div>
+<img src="bannerava.jpg" loading="eager" decoding="sync"
+     style="width:100%;height:auto;display:block;border-radius:0 0 6px 6px;box-shadow:0 2px 4px rgba(0,0,0,.1)" alt="">
 
 <style>
 /* container geral */
-.carousel{position:relative;overflow:hidden;margin-top:0}
+.carousel{position:relative;overflow:hidden;margin:0}
 .carousel-inner{display:flex;transition:transform .35s ease}
 .slide{flex:0 0 100%}
 .slide img{width:100%;display:block}
 
 /* setas */
 .arrow{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  width:40px;
-  height:40px;
-  background:rgba(0,0,0,.45);
-  color:#fff;
-  border:none;
-  border-radius:50%;
-  font-size:24px;
-  line-height:1;
-  cursor:pointer;
-  z-index:2;
-  -webkit-tap-highlight-color:transparent;
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:40px;height:40px;background:rgba(0,0,0,.45);color:#fff;
+  border:none;border-radius:50%;font-size:24px;line-height:1;
+  cursor:pointer;z-index:2;-webkit-tap-highlight-color:transparent
 }
-.arrow.left{left:8px}
-.arrow.right{right:8px}
+.arrow.left{left:8px}.arrow.right{right:8px}
 .arrow:active{background:rgba(0,0,0,.6)}
 </style>
 
 <script>
-let idx = 0;
-const inner = document.getElementById('inner');
-const total = inner.children.length;
-
-function move(dir){
-  idx = (idx + dir + total) % total;
-  inner.style.transform = `translateX(-${idx * 100}%)`;
-}
+let idx=0,inner=document.getElementById('inner'),total=inner.children.length;
+function move(d){idx=(idx+d+total)%total;inner.style.transform=`translateX(-${idx*100}%)`}
 </script>
-<!-- ========= FIM CARROSSEL MANUAL ========= -->
-
-
-
- </div>
- <!-- ↓↓↓ BLOCO IMAGEM ABAIXO DO LARANJA – PUXA DA RAIZ ↓↓↓ -->
-<img src="bannerava.jpg" 
-     loading="eager" 
-     decoding="sync" 
-     style="width:100%;height:auto;display:block;border-radius:0 0 6px 6px;box-shadow:0 2px 4px rgba(0,0,0,.1)" 
-     alt="">
+<!-- ========= FIM CARROSSEL ========= -->
  <!-- FAIXA CINZA DIVISÓRIA -->
 <div style="
   height: 8px;
