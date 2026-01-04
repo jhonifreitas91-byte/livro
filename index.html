@@ -4,7 +4,7 @@
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+ {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
@@ -21,7 +21,7 @@ src="https://www.facebook.com/tr?id=1135594271979654&ev=PageView&noscript=1"
 <meta name="google-site-verification" content="mUVLuqDsk2PvELn81kfnbTKUl-JYlAVVAnIEmtYozTI" />
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
-<title>Apostila IBGE 2026- Shopee Brasil</title>
+<title>Apostila IBGE 2026 - Shopee Brasil</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 <style>
@@ -30,60 +30,32 @@ src="https://www.facebook.com/tr?id=1135594271979654&ev=PageView&noscript=1"
   img{max-width:100%;display:block}
   a{color:inherit;text-decoration:none}
 
-  /* CARROSSEL */
-  .carousel{position:relative;overflow:hidden}
-  .carousel-inner{display:flex;transition:transform .4s ease}
-  .slide{flex:0 0 100%}
-  .slide img{width:100%;display:block}
-  .carousel-dots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
-  .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer}
-  .dot.active{background:#fff}
-
-  /* ÍCONES FIXOS NO CARROSSEL */
-  .carousel-icons {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    z-index: 10;
-    pointer-events: none;
+  /* ---------- carrossel sem corte ---------- */
+  .carousel{position:relative;overflow:hidden;margin:0}
+  .carousel-inner{display:flex;transition:transform .35s ease}
+  .slide{flex:0 0 100%;position:relative;line-height:0}   /* altura livre */
+  .slide img{width:100%;height:auto;display:block;max-height:90vh;object-fit:contain}
+  .arrow{
+    position:absolute;top:50%;transform:translateY(-50%);
+    width:40px;height:40px;background:rgba(0,0,0,.45);color:#fff;
+    border:none;border-radius:50%;font-size:24px;line-height:1;
+    cursor:pointer;z-index:2;-webkit-tap-highlight-color:transparent
   }
-  .ico-btn {
-    pointer-events: auto;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(0,0,0,.55);
-    border: 1.5px solid #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background .2s;
-  }
-  .ico-btn:hover { background: rgba(0,0,0,.75); }
-  .ico-btn svg { display: block; }
+  .arrow.left{left:8px}.arrow.right{right:8px}
+  .arrow:active{background:rgba(0,0,0,.6)}
 
-  /* OFERTA RELÂMPAGO */
+  /* ---------- restante do layout ---------- */
   .flash-banner{background:#EE4D2D;color:#fff;font-size:16px;font-weight:700;padding:8px 12px;display:flex;align-items:center;gap:6px}
   .flash-banner .lightning{font-size:26px;color:#ffeb3b}
   .flash-banner .ends{flex:1;text-align:center;font-size:12px}
   .timer{display:flex;gap:2px}
   .timer span{background:#000;color:#fff;padding:2px 4px;border-radius:2px;font-size:14px;min-width:20px;text-align:center}
-
-  /* ESPAÇO PARA IMAGEM */
   #areaImagem{background:#fff;text-align:center;padding:12px 0}
-
-  /* CORES */
   .variants{background:#fff;padding:12px;margin-top:8px}
   .variants h4{font-size:14px;margin-bottom:8px}
   .colors{display:flex;gap:8px}
   .colors span{display:inline-block;padding:4px 8px;border:1px solid #bdbdbd;border-radius:2px;font-size:12px;cursor:pointer}
   .colors span.selected{border-color:#EE4D2D;color:#EE4D2D}
-
-  /* EXTRAS */
   .extras{background:#fff;padding:12px;margin-top:8px}
   .row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:14px}
   .qty{display:flex;align-items:center;border:1px solid #bdbdbd;border-radius:2px}
@@ -91,34 +63,24 @@ src="https://www.facebook.com/tr?id=1135594271979654&ev=PageView&noscript=1"
   .qty input{width:40px;text-align:center;border:none;font-size:14px}
   .shipping{font-size:12px;color:#757575}
   .shipping b{color:#212121}
-
-  /* LOJA */
   .store{background:#fff;padding:12px;margin-top:8px;display:flex;align-items:center;gap:8px}
   .store img{width:40px;height:40px;border-radius:50%}
   .store-info{flex:1;font-size:14px}
   .store-info .verified{color:#00bfa5;font-size:12px}
   .store button{background:#fff;border:1px solid #EE4D2D;color:#EE4D2D;padding:4px 8px;border-radius:2px;font-size:12px}
-
-  /* DESCRIÇÃO */
   .tab-content{background:#fff;padding:12px;font-size:14px}
   .tab-content h4{margin-bottom:8px;font-size:14px}
   .tab-content ul{margin-bottom:12px;padding-left:20px}
   .tab-content table{width:100%;border-collapse:collapse;font-size:12px}
   .tab-content td{padding:4px 0;border-bottom:1px solid #f5f5f5}
   .tab-content td:first-child{width:35%;color:#757575}
-
-  /* AVALIAÇÕES */
   .review-item .user{display:flex;align-items:center;margin-bottom:4px;font-size:14px}
   .review-item .user img{width:20px;height:20px;border-radius:50%;margin-right:6px}
   .stars{color:#ffbf00;margin-bottom:4px}
   .review-item p{margin-bottom:6px;font-size:14px}
   .review-item .images img{width:80px;height:80px;border-radius:4px;margin-right:4px}
-
-  /* RODAPÉ */
   footer{background:#fff;margin-top:8px;padding:12px;font-size:12px;color:#757575;text-align:center}
   footer a{color:#0275d8}
-
-  /* BOTTOM BAR */
   .bottom-bar{position:fixed;bottom:0;left:0;right:0;display:flex;height:48px;background:#fff;border-top:1px solid #e0e0e0}
   .bottom-bar button{flex:1;border:none;font-size:14px;font-weight:500;color:#fff}
   .chat{background:#00bfa5}
@@ -128,7 +90,8 @@ src="https://www.facebook.com/tr?id=1135594271979654&ev=PageView&noscript=1"
 </head>
 <body>
 
- <div class="sc-hLQRIN jiNjgB">
+<!-- CABEÇALHO PROMOCIONAL -->
+<div class="sc-hLQRIN jiNjgB">
   <a href="#" style="width: 50%;" id="umdoistrestplink1">
     <img src="Logo%20Shopee%20White-d247f0f6.jpg" alt="Logo">
   </a>
@@ -142,85 +105,25 @@ src="https://www.facebook.com/tr?id=1135594271979654&ev=PageView&noscript=1"
 </div>
 
 <style>
-  body {
-    font-family: 'Montserrat', sans-serif;
-  }
-
   .jiNjgB {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 10px;
-    background: linear-gradient(181deg, rgb(245, 63, 45), rgb(254, 99, 50) 87%);
+    width: 100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px;
+    background:linear-gradient(181deg, rgb(245, 63, 45), rgb(254, 99, 50) 87%);
   }
-
-  .jiNjgB img {
-    width: 100%;
-  }
-
-  .jiNjgB .container_banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    color: rgb(255, 255, 255);
-    border: 1px solid rgb(255, 255, 255);
-    padding: 0.2em;
-    max-width: 80%;
-  }
-
-  .jiNjgB .container_banner > span {
-    font-size: 10px;
-  }
-
-  .jiNjgB .name_cupom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .jiNjgB .name_cupom > h3 {
-    font-size: 16px;
-    color: rgb(0, 221, 220);
-    animation: shake 1s infinite;
-    margin: 0;
-  }
-
-  .jiNjgB .name_cupom > h5 {
-    font-size: 10px;
-    color: rgb(255, 255, 255);
-    margin: 0;
-  }
-
-  .jiNjgB .name_cupom > h5 > span {
-    margin-right: 5px;
-    margin-left: 3px;
-  }
-
-  @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-2px); }
-    75% { transform: translateX(2px); }
-  }
-
-  @media screen and (min-width: 768px) {
-    .jiNjgB {
-      justify-content: center;
-    }
-    .jiNjgB img {
-      width: 150px;
-    }
-    .jiNjgB .container_banner {
-      display: none;
-    }
+  .jiNjgB img{width:100%}
+  .jiNjgB .container_banner{display:flex;flex-direction:column;align-items:center;width:100%;color:#fff;border:1px solid #fff;padding:.2em;max-width:80%}
+  .jiNjgB .container_banner > span{font-size:10px}
+  .jiNjgB .name_cupom{display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden}
+  .jiNjgB .name_cupom > h3{font-size:16px;color:#00dddc;animation:shake 1s infinite;margin:0}
+  .jiNjgB .name_cupom > h5{font-size:10px;color:#fff;margin:0}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-2px)}75%{transform:translateX(2px)}}
+  @media screen and (min-width: 768px){
+    .jiNjgB{justify-content:center}
+    .jiNjgB img{width:150px}
+    .jiNjgB .container_banner{display:none}
   }
 </style>
 
-<!-- ========= CARROSSEL MANUAL SEM FAIXA CINZA ========= -->
+<!-- ========= CARROSSEL SEM FAIXA CINZA ========= -->
 <div class="carousel">
   <button class="arrow left" onclick="move(-1)">‹</button>
   <div class="carousel-inner" id="inner">
@@ -229,151 +132,64 @@ src="https://www.facebook.com/tr?id=1135594271979654&ev=PageView&noscript=1"
     <div class="slide"><img src="s03.JPG"></div>
   </div>
   <button class="arrow right" onclick="move(1)">›</button>
-<!-- ===== fim carrossel ===== -->
-</div><img src="bannerava.jpg" loading="eager" decoding="sync" style="width:100%;height:auto;display:block;border-radius:0 0 6px 6px;box-shadow:0 2px 4px rgba(0,0,0,.1);margin:0" alt="">
-<style>
-/* ---------- carrossel ---------- */
-.carousel{position:relative;overflow:hidden;margin:0}
-.carousel-inner{display:flex;transition:transform .35s ease}
-.slide{flex:0 0 100%;height:0;padding-bottom:56.25%;position:relative}   /* <-- novo */
-.slide img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover} /* <-- novo */
-
-/* ---------- setas ---------- */
-.arrow{
-  position:absolute;top:50%;transform:translateY(-50%);
-  width:40px;height:40px;background:rgba(0,0,0,.45);color:#fff;
-  border:none;border-radius:50%;font-size:24px;line-height:1;
-  cursor:pointer;z-index:2;-webkit-tap-highlight-color:transparent
-}
-.arrow.left{left:8px}.arrow.right{right:8px}
-.arrow:active{background:rgba(0,0,0,.6)}
-</style>
-
+</div>
+<img src="bannerava.jpg" loading="eager" decoding="sync" style="width:100%;height:auto;display:block;border-radius:0 0 6px 6px;box-shadow:0 2px 4px rgba(0,0,0,.1);margin:0" alt="">
 <script>
 let idx=0,inner=document.getElementById('inner'),total=inner.children.length;
 function move(d){idx=(idx+d+total)%total;inner.style.transform=`translateX(-${idx*100}%)`}
 </script>
- <style>
-  /* remove margem de qualquer img que venha após o carrossel */
-  .carousel + img{margin-top:-1px}
-</style>
-<!-- ========= FIM ========= -->
- <!-- FAIXA CINZA DIVISÓRIA -->
-<div style="
-  height: 8px;
-  background: #f5f5f5;
-  margin: 0;
-"></div>
 
-<!-- SEGUNDA FAIXA CINZA -->
-<div style="
-  height: 8px;
-  background: #f5f5f5;
-  margin: 0;
-"></div>
+<!-- ESPAÇADOR -->
+<div style="height:8px;background:#f5f5f5;margin:0"></div>
 
- <video controls autoplay muted loop playsinline style="width:100%;display:block">
+<!-- VÍDEO -->
+<video controls autoplay muted loop playsinline style="width:100%;display:block">
   <source src="video1.mp4" type="video/mp4">
   <source src="video1.webm" type="video/webm">
   Seu navegador não suporta vídeo HTML5.
 </video>
- 
-<!-- AQUI ENTRAM AS AVALIAÇÕES -->
 
 <!-- AVALIAÇÕES -->
 <div id="avaliacoes" class="tab-content" style="border-top:1px solid #e0e0e0;margin-bottom:0;padding-bottom:0">
   <div style="display:flex;align-items:center;gap:8px;padding:12px 12px 6px">
     <span style="font-weight:700;font-size:18px">4.7⭐</span>
-    <!-- COR PRETA AQUI -->
     <span style="color:#000;font-size:14px">Avaliações do produto</span>
   </div>
   <div style="height:1px;background:#e0e0e0;margin:0 12px 12px"></div>
 
   <!-- review-item 1 -->
-<div class="review-item"
-     data-img="cliente1.jpg"
-     data-text="Chegou super rápido! Qualidade excelente!"
-     data-perfil="marcosperfil.jpg"
-     data-usuario="Marcos A."
-     data-nota="5"
-     style="padding:12px 12px 20px;border-bottom:1px solid #f2f2f2">
-  <div class="user" style="display:flex;align-items:center;gap:8px">
-    <img src="marcosperfil.jpg" style="width:32px;height:32px;border-radius:50%">
-    <span style="font-weight:600">Marcos A.</span>
+  <div class="review-item" data-img="cliente1.jpg" data-text="Chegou super rápido! Qualidade excelente!" data-perfil="marcosperfil.jpg" data-usuario="Marcos A." data-nota="5" style="padding:12px 12px 20px;border-bottom:1px solid #f2f2f2">
+    <div class="user" style="display:flex;align-items:center;gap:8px"><img src="marcosperfil.jpg" style="width:32px;height:32px;border-radius:50%"><span style="font-weight:600">Marcos A.</span></div>
+    <div class="stars" style="color:#ffa500;font-size:14px;margin:6px 0">★★★★★</div>
+    <p style="margin:0 0 8px;font-size:14px;line-height:1.4">Chegou super rápido! Qualidade excelente, igual ao anúncio.</p>
+    <div class="images"><img src="cliente1.jpg" style="width:72px;height:72px;border-radius:8px;object-fit:cover;cursor:pointer" onclick="abrirGaleria(0)"></div>
   </div>
-  <div class="stars" style="color:#ffa500;font-size:14px;margin:6px 0">★★★★★</div>
-  <p style="margin:0 0 8px;font-size:14px;line-height:1.4">Chegou super rápido! Qualidade excelente, igual ao anúncio.</p>
-  <div class="images">
-    <img src="cliente1.jpg"
-         style="width:72px;height:72px;border-radius:8px;object-fit:cover;cursor:pointer"
-         onclick="abrirGaleria(0)">
+
+  <!-- review-item 2 -->
+  <div class="review-item" data-img="cliente2.PNG" data-text="Muiton bom!!!" data-perfil="claudemir2.jpg" data-usuario="Claudemir A." data-nota="5" style="padding:12px 12px 20px;border-bottom:1px solid #f2f2f2">
+    <div class="user" style="display:flex;align-items:center;gap:8px"><img src="claudemir2.jpg" style="width:32px;height:32px;border-radius:50%"><span style="font-weight:600">Claudemir A.</span></div>
+    <div class="stars" style="color:#ffa500;font-size:14px;margin:6px 0">★★★★★</div>
+    <p style="margin:0 0 8px;font-size:14px;line-height:1.4">Muito bom!!!</p>
+    <div class="images"><img src="cliente2.PNG" style="width:72px;height:72px;border-radius:8px;object-fit:cover;cursor:pointer" onclick="abrirGaleria(1)"></div>
+  </div>
+
+  <!-- review-item 3 -->
+  <div class="review-item" data-img="cliente3.jpg" data-text="Perfeito! Melhor aquisição!!" data-perfil="marioperfil.jpg" data-usuario="Mario L." data-nota="5" style="padding:12px 12px 20px;border-bottom:1px solid #f2f2f2">
+    <div class="user" style="display:flex;align-items:center;gap:8px"><img src="marioperfil.jpg" style="width:32px;height:32px;border-radius:50%"><span style="font-weight:600">Mario L.</span></div>
+    <div class="stars" style="color:#ffa500;font-size:14px;margin:6px 0">★★★★★</div>
+    <p style="margin:0:0 8px;font-size:14px;line-height:1.4">Perfeito! Melhor aquisição!!</p>
+    <div class="images"><img src="cliente3.jpg" style="width:72px;height:72px;border-radius:8px;object-fit:cover;cursor:pointer" onclick="abrirGaleria(2)"></div>
+  </div>
+
+  <!-- review-item 4 -->
+  <div class="review-item" data-img="videojoao.jpg" data-text="Impressionado com a qualidade" data-perfil="joaoperfil.jpg" data-usuario="Joao L." data-nota="5" style="padding:12px 12px 20px;border-bottom:1px solid #f2f2f2">
+    <div class="user" style="display:flex;align-items:center;gap:8px"><img src="joaoperfil.jpg" style="width:32px;height:32px;border-radius:50%"><span style="font-weight:600">Joao A.</span></div>
+    <div class="stars" style="color:#ffa500;font-size:14px;margin:6px 0">★★★★★</div>
+    <p style="margin:0 0 8px;font-size:14px;line-height:1.4">Impressionado com a qualidade</p>
+    <div class="images"><img src="videojoao.jpg" style="width:72px;height:72px;border-radius:8px;object-fit:cover;cursor:pointer" onclick="abrirGaleria(2)"></div>
   </div>
 </div>
 
-<!-- review-item 2 -->
-<div class="review-item"
-     data-img="cliente2.PNG"
-     data-text="Muiton bom!!!"
-     data-perfil="claudemir2.jpg"
-     data-usuario="Claudemir A."
-     data-nota="5"
-     style="padding:12px 12px 20px;border-bottom:1px solid #f2f2f2">
-  <div class="user" style="display:flex;align-items:center;gap:8px">
-    <img src="claudemir2.jpg" style="width:32px;height:32px;border-radius:50%">
-    <span style="font-weight:600">Claudemir A.</span>
-  </div>
-  <div class="stars" style="color:#ffa500;font-size:14px;margin:6px 0">★★★★★</div>
-  <p style="margin:0 0 8px;font-size:14px;line-height:1.4">Muito bom!!!</p>
-  <div class="images">
-    <img src="cliente2.PNG"
-         style="width:72px;height:72px;border-radius:8px;object-fit:cover;cursor:pointer"
-         onclick="abrirGaleria(1)">
-  </div>
-</div>
-
-<!-- review-item 3 -->
-<div class="review-item"
-     data-img="cliente3.jpg"
-     data-text="Perfeito! Melhor aquisição!!"
-     data-perfil="marioperfil.jpg"
-     data-usuario="Mario L."
-     data-nota="5"
-     style="padding:12px 12px 20px;border-bottom:1px solid #f2f2f2">   <!-- <-- linha acrescentada -->
-  <div class="user" style="display:flex;align-items:center;gap:8px">
-    <img src="marioperfil.jpg" style="width:32px;height:32px;border-radius:50%">
-    <span style="font-weight:600">Mario L.</span>
-  </div>
-  <div class="stars" style="color:#ffa500;font-size:14px;margin:6px 0">★★★★★</div>
-  <p style="margin:0 0 8px;font-size:14px;line-height:1.4">Perfeito! Melhor aquisição!!</p>
-  <div class="images">
-    <img src="cliente3.jpg"
-         style="width:72px;height:72px;border-radius:8px;object-fit:cover;cursor:pointer"
-         onclick="abrirGaleria(2)">
-  </div>
-</div>
-
-<!-- review-item 4 -->
-<div class="review-item"
-     data-img="videojoao.jpg"
-     data-text="Impressionado com a qualidade"
-     data-perfil="joaoperfil.jpg"
-     data-usuario="Joao L."
-     data-nota="5"
-     style="padding:12px 12px 20px;border-bottom:1px solid #f2f2f2">   <!-- <-- linha acrescentada -->
-  <div class="user" style="display:flex;align-items:center;gap:8px">
-    <img src="joaoperfil.jpg" style="width:32px;height:32px;border-radius:50%">
-    <span style="font-weight:600">Joao A.</span>
-  </div>
-  <div class="stars" style="color:#ffa500;font-size:14px;margin:6px 0">★★★★★</div>
-  <p style="margin:0 0 8px;font-size:14px;line-height:1.4">Impressionado com a qualidade</p>
-  <div class="images">
-    <img src="videojoao.jpg"
-         style="width:72px;height:72px;border-radius:8px;object-fit:cover;cursor:pointer"
-         onclick="abrirGaleria(2)">
-  </div>
-</div>
-
-</div>
 <!-- GALERIA OVERLAY -->
 <div id="galeriaOverlay" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);display:none;z-index:999999;overflow:hidden">
   <div id="galeriaTopo" style="position:absolute;top:0;left:0;width:100%;padding:20px 15px 10px;background:linear-gradient(to bottom,rgba(0,0,0,.7),transparent);color:#fff;">
@@ -390,57 +206,42 @@ function move(d){idx=(idx+d+total)%total;inner.style.transform=`translateX(-${id
   <img id="galeriaImg" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:90%;max-height:90%;object-fit:contain">
   <button id="btnDir" onclick="mudarImg(1)" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:48px;height:48px;background:rgba(255,255,255,.15);border:none;border-radius:50%;color:#fff;font-size:28px;cursor:pointer">›</button>
 </div>
- <div style="height:8px;background:#e0e0e0"></div>
- 
 
-<img src="loja.jpg" 
-     loading="eager" 
-     decoding="sync" 
-     style="width:100%;height:auto;display:block" 
-     alt="">
+<div style="height:8px;background:#e0e0e0"></div>
 
+<!-- LOJA -->
+<img src="loja.jpg" loading="eager" decoding="sync" style="width:100%;height:auto;display:block" alt="">
 <div style="height:10px;background:#e0e0e0"></div>
 
-<!-- TÍTULO VISÍVEL (fundo branco) -->
+<!-- DESCRIÇÃO -->
 <h3 style="margin:0 0 8px;font-size:18px;font-weight:600;background:#fff">Descrição</h3>
-
 <div class="tab-content" style="background:#fff;border:none;border-radius:0">
-
   <p><strong>Beretta KL-92 KLI Cromada – Airgun Co2 Blowback 4,5mm</strong><br>
-<strong>Zero burocracia, 100% realista. É arma de verdade, só que de pressão.</strong></p>
-
-<ul>
-  <li><strong>Full metal, cromada espelhada</strong> – pesa 982g, brilha que nem espelho e assusta quem vê.</li>
-
-  <li><strong>Blowback violento</strong> – slide metálico recua a cada tiro, simulando o 9mm original. Só falta o estampido.</li>
-
-  <li><strong>21 tiros de fogo contínuo</strong> – magazine de aço com capacidade pra varar lata sem parar pra recarregar.</li>
-
-  <li><strong>Co2 12g escondido no carregador</strong> – troca em 3 segundos, rende até 70 disparos por cápsula.</li>
-
-  <li><strong>Réplica 1:1 da M92 A1</strong> – desmonta igual a original, trava ambidestra, trilho Picatinny e ponto de mira fixo.</li>
-
-  <li><strong>Vem de brinde</strong> – maleta rígida com espuma cortada sob medida pra você guardar ou exibir sem pudor.</li>
-</ul>
-
-<h4>Ficha técnica</h4>
-Cor: Cromado espelhado<br>
-Calibre: 4,5mm (esfera de aço)<br>
-Sistema: Co2 12g blowback<br>
-Material: Alumínio, aço e composto<br>
-Capacidade: 21 tiros<br>
-Comprimento: 212 mm<br>
-Peso: 982 g<br>
-Potência: 1,9 J (328 FPS)<br>
-Fabricante: Krown Land Industries / SRC
-
-<footer>
-Pronta entrega. Envio discreto por transportadora. Escolhe, paga e recebe em casa.
-</footer>
-  <a href="/security">Segurança</a> |
-  <a href="/policies">Política de privacidade</a><br/>
+  <strong>Zero burocracia, 100% realista. É arma de verdade, só que de pressão.</strong></p>
+  <ul>
+    <li><strong>Full metal, cromada espelhada</strong> – pesa 982g, brilha que nem espelho e assusta quem vê.</li>
+    <li><strong>Blowback violento</strong> – slide metálico recua a cada tiro, simulando o 9mm original. Só falta o estampido.</li>
+    <li><strong>21 tiros de fogo contínuo</strong> – magazine de aço com capacidade pra varar lata sem parar pra recarregar.</li>
+    <li><strong>Co2 12g escondido no carregador</strong> – troca em 3 segundos, rende até 70 disparos por cápsula.</li>
+    <li><strong>Réplica 1:1 da M92 A1</strong> – desmonta igual a original, trava ambidestra, trilho Picatinny e ponto de mira fixo.</li>
+    <li><strong>Vem de brinde</strong> – maleta rígida com espuma cortada sob medida pra você guardar ou exibir sem pudor.</li>
+  </ul>
+  <h4>Ficha técnica</h4>
+  Cor: Cromado espelhado<br>
+  Calibre: 4,5mm (esfera de aço)<br>
+  Sistema: Co2 12g blowback<br>
+  Material: Alumínio, aço e composto<br>
+  Capacidade: 21 tiros<br>
+  Comprimento: 212 mm<br>
+  Peso: 982 g<br>
+  Potência: 1,9 J (328 FPS)<br>
+  Fabricante: Krown Land Industries / SRC
+  <footer>
+    Pronta entrega. Envio discreto por transportadora. Escolhe, paga e recebe em casa.
+  </footer>
+  <a href="/security">Segurança</a> | <a href="/policies">Política de privacidade</a><br>
   ©️ 2025 Shopee. Todos os direitos reservados.
-</footer>
+</div>
 
 <!-- BOTTOM BAR -->
 <div class="bottom-bar">
@@ -450,19 +251,6 @@ Pronta entrega. Envio discreto por transportadora. Escolhe, paga e recebe em cas
   </button>
   <button class="buy" onclick="window.location.href='https://seguro.shopeebr.click/api/public/shopify?product=1899515628127&store=18995'">Compre agora</button>
 </div>
- <!-- LINHA DIVISÓRIA SIMPLES -->
-<style>
-.bottom-bar .chat{position:relative}
-.bottom-bar .chat::after{
-  content:'';
-  position:absolute;
-  right:0;
-  top:0;
-  bottom:0;
-  width:1px;
-  background:#000;
-}
-</style>
 
 <script>
 /* ----- tudo dentro do mesmo listener ----- */
@@ -470,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* carrossel */
   let idx = 0;
-  const inner = document.getElementById('carouselInner');
+  const inner = document.getElementById('inner');
   const dots  = document.querySelectorAll('.carousel-dots span');
   setInterval(() => {
     idx = (idx + 1) % inner.children.length;
