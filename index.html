@@ -220,7 +220,7 @@ src="https://www.facebook.com/tr?id=1135594271979654&ev=PageView&noscript=1"
   }
 </style>
 
-<!-- ========= CARROSSEL MANUAL COM SETAS ========= -->
+<!-- ========= CARROSSEL MANUAL SEM FAIXA CINZA ========= -->
 <div class="carousel">
   <button class="arrow left" onclick="move(-1)">‹</button>
   <div class="carousel-inner" id="inner">
@@ -229,18 +229,16 @@ src="https://www.facebook.com/tr?id=1135594271979654&ev=PageView&noscript=1"
     <div class="slide"><img src="s03.JPG"></div>
   </div>
   <button class="arrow right" onclick="move(1)">›</button>
-</div>
-<img src="bannerava.jpg" loading="eager" decoding="sync"
-     style="width:100%;height:auto;display:block;border-radius:0 0 6px 6px;box-shadow:0 2px 4px rgba(0,0,0,.1)" alt="">
+</div><img src="bannerava.jpg" loading="eager" decoding="sync" style="width:100%;height:auto;display:block;border-radius:0 0 6px 6px;box-shadow:0 2px 4px rgba(0,0,0,.1);margin:0" alt="">
 
 <style>
-/* container geral */
+/* ---------- carrossel ---------- */
 .carousel{position:relative;overflow:hidden;margin:0}
 .carousel-inner{display:flex;transition:transform .35s ease}
 .slide{flex:0 0 100%}
 .slide img{width:100%;display:block}
 
-/* setas */
+/* ---------- setas ---------- */
 .arrow{
   position:absolute;top:50%;transform:translateY(-50%);
   width:40px;height:40px;background:rgba(0,0,0,.45);color:#fff;
@@ -255,7 +253,7 @@ src="https://www.facebook.com/tr?id=1135594271979654&ev=PageView&noscript=1"
 let idx=0,inner=document.getElementById('inner'),total=inner.children.length;
 function move(d){idx=(idx+d+total)%total;inner.style.transform=`translateX(-${idx*100}%)`}
 </script>
-<!-- ========= FIM CARROSSEL ========= -->
+<!-- ========= FIM ========= -->
  <!-- FAIXA CINZA DIVISÓRIA -->
 <div style="
   height: 8px;
