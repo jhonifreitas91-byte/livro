@@ -253,6 +253,10 @@ src="https://www.facebook.com/tr?id=1135594271979654&ev=PageView&noscript=1"
 let idx=0,inner=document.getElementById('inner'),total=inner.children.length;
 function move(d){idx=(idx+d+total)%total;inner.style.transform=`translateX(-${idx*100}%)`}
 </script>
+ <style>
+  /* remove margem de qualquer img que venha após o carrossel */
+  .carousel + img{margin-top:-1px}
+</style>
 <!-- ========= FIM ========= -->
  <!-- FAIXA CINZA DIVISÓRIA -->
 <div style="
